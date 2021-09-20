@@ -12,7 +12,7 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 ## Technical Requirements
 
 - Java JDK 1.8 installed
-- Scala 2.12
+- Scala 2.12.10
 - GitHub account
 - Maven installed
 - Cluster access to Yugabyte Cloud
