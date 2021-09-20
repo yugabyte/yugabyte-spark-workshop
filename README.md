@@ -23,14 +23,14 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 ### What will we build in this workshop?
 
 - A Spark application with Yugabyte Spark connector to interact with Yugabye cloud to demonstrate how Yugabyte suppports Json data natively
-  - Read from YugabyteDB table
-  - Perform ETL operation
-  - Write back to YugabyteDB
+  - Reading from YugabyteDB table
+  - Performing ETL operation
+  - Writing back to YugabyteDB
   - Column pruning and predicate pushdown
 
 ## Agenda
 
 - Overview of YugabyteDB: Distributed SQL Database
-- Unique features of YCQL vs Cassandra
-- Apache Spark and YugabyteDB Spark Connector: Main features
+- YCQL vs Cassandra
+- Apache Spark and YugabyteDB Spark Connector: Key differentiators
 - Hands-on Workshop
