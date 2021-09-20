@@ -13,6 +13,7 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 
 - Java JDK 1.8 installed
 - Scala 2.12
+- sbt 1.5
 - GitHub account
 - Maven installed
 - Cluster access to Yugabyte Cloud
@@ -20,6 +21,6 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 - Yugabyte Spark Cassandra connector: 3.0-yb-8 https://mvnrepository.com/artifact/com.yugabyte.spark/spark-cassandra-connector
 
 ### What will we build in this workshop?
+Diagram
 
-## Agenda
-
+## Session Slides
