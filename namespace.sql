@@ -2,8 +2,17 @@
  Create namespace test;
  Use test;
  
- //Create a table: employees_json
+ //Create employees_json
  CREATE TABLE employees_json
+ (department_id INT, 
+  employee_id INT, 
+  dept_name TEXT,
+  salary Double,
+  phone jsonb,
+  PRIMARY KEY(department_id, employee_id));
+ 
+ //Create employees_json_copy
+ CREATE TABLE employees_json_copy
  (department_id INT, 
   employee_id INT, 
   dept_name TEXT,
