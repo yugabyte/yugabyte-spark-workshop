@@ -51,7 +51,7 @@ runReadWriteSqlExample(spark)
 spark.stop()
   }
 
-  private def runReadWriteSqlExample(spark: SparkSession): Unit = {
+private def runReadWriteSqlExample(spark: SparkSession): Unit = {
 
 //List namespace
 spark.sql("SHOW NAMESPACES FROM ybcatalog").show
@@ -79,13 +79,12 @@ val windowSpec  = Window.partitionBy("department_id").orderBy("salary")
 
 //rank() window function is used to provide a rank to the result within a window partition. This function leaves gaps in rank when there are ties.
 df_yb.withColumn("rank",rank().over(windowSpec)).show()
-                 println("Read/Write successful")
 
  //writing back  to YCQL: Persisting a Dataset to Database using Save command, following examples are equivalent
  df.write
-	     .cassandraFormat("personcopy", "test")
-	     .mode("overwrite")
-	     .save()
+   .cassandraFormat("employees_json_copy", "test")
+   .mode("overwrite")
+   .save()
 //To verify
 val sqlDF = spark.sql("SELECT * FROM ybcatalog.test.employees_json_copy").show(false)
 
