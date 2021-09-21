@@ -21,6 +21,7 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 - Yugabyte Spark Cassandra connector: 3.0-yb-8 https://mvnrepository.com/artifact/com.yugabyte.spark/spark-cassandra-connector
 
 ### What will we build in this workshop?
+Diagram
 
 - A Spark application with Yugabyte Spark connector to interact with Yugabye cloud to demonstrate how Yugabyte suppports Json data natively
   - Reading from YugabyteDB table
@@ -34,3 +35,5 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 - YCQL vs Cassandra
 - Apache Spark and YugabyteDB Spark Connector: Key differentiators
 - Hands-on Workshop
+=======
+## Session Slides
