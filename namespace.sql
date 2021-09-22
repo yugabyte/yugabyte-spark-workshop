@@ -1,5 +1,5 @@
- //Create namesapce
- Create namespace test;
+ //Create keysapce
+ Create keyspace test;
  Use test;
  
  //Create employees_json
