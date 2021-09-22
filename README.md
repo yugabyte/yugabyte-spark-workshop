@@ -35,5 +35,9 @@ Diagram
 - YCQL vs Cassandra
 - Apache Spark and YugabyteDB Spark Connector: Key differentiators
 - Hands-on Workshop
-=======
+
+## Hands-on Workshop
+
+
+
 ## Session Slides
