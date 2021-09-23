@@ -20,8 +20,7 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 - Internet access - ability to access sites via port 80 and 443 (HTTPS)
 - Yugabyte Spark Cassandra connector: 3.0-yb-8 https://mvnrepository.com/artifact/com.yugabyte.spark/spark-cassandra-connector
 
-### What will we build in this workshop?
-Diagram
+![Architecture of YB Spark workshop application](yb%20spark%20workshop%20diagram.png)
 
 - A Spark application with Yugabyte Spark connector to interact with Yugabye cloud to demonstrate how Yugabyte suppports Json data natively
   - Reading from YugabyteDB table
@@ -31,13 +30,16 @@ Diagram
 
 ## Agenda
 
-- Overview of YugabyteDB: Distributed SQL Database
-- YCQL vs Cassandra
-- Apache Spark and YugabyteDB Spark Connector: Key differentiators
+- Overview of Yugabyte Architecture
+- Yugabyte’s YCQL API
+- YugabyteDB Spark Connector
 - Hands-on Workshop
+
+
 
 ## Hands-on Workshop
 - Check Java version: 1.8 required - java -version
+
 - Create a free cluster from Yugabyte cloud
   - Install Yugabyte client shell
     cd /Users/weiwang
@@ -51,7 +53,8 @@ Diagram
     SSL_CERTFILE=/Users/weiwang/Downloads/root.crt $YUGABYTE_HOME/bin/ycqlsh 748fdee2-aabe-4d75-a698-a6514e0b19ff.aws.ybdb.io 9042 -u admin --ssl
   - Create keyspace, tables and insert testing data
     namespace.sql
-- Install Spark 3.0 as needed
+   
+- Install Spark 3.0
   - Download Spark 3.0
     wget https://dlcdn.apache.org/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz
     tar xvf spark-3.0.3-bin-hadoop2.7.tgz
@@ -101,7 +104,7 @@ Diagram
   //to verify
   val sqlDF = spark.sql("SELECT * FROM ybcatalog.test.employees_json_copy order by department_id").show(false)
 
-- Native Jsonb support demo
+- Native JSONB support demo
 
  - Using JSONB Column Pruning
 val query = "SELECT department_id, employee_id, get_json_object(phone, '$.code') as code FROM ybcatalog.test.employees_json WHERE get_json_string(phone, '$.key(1)') = '1400' order by department_id limit 2";
@@ -116,3 +119,4 @@ df_sel2.explain
 
 =======
 ## Session Slides
+![Architecture of YB Spark workshop application](session_slides.pdf)
