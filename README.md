@@ -1,5 +1,5 @@
 # yugabyte-spark-workshop
-Hands-on workshop to build apps using Yugabyte Cloud and Spark 3.x. You will be building Spark application with Yugabyte Spark connector to interact with Yugabye cloud to demonstrate how Yugabyte's YCQL suppports JSONB data natively.
+Hands-on workshop to build apps using Yugabyte Cloud and Spark 3.x. You will be building Spark application with Yugabyte Spark connector to interact with Yugabye cloud and see Yugabyte's YCQL suppports JSONB data natively. We will be using Spark windowing functions to interact with data.
 
 ![Architecture of YB Spark workshop application](yb%20spark%20workshop%20diagram.png)
 
