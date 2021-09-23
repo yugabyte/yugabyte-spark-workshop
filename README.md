@@ -1,5 +1,13 @@
 # yugabyte-spark-workshop
-Hands-on workshop to build apps using Yugabyte and Spark 3.x
+Hands-on workshop to build apps using Yugabyte Cloud and Spark 3.x. You will be building Spark application with Yugabyte Spark connector to interact with Yugabye cloud to demonstrate how Yugabyte's YCQL suppports JSONB data natively.
+
+![Architecture of YB Spark workshop application](yb%20spark%20workshop%20diagram.png)
+
+- High Level Tasks:
+  - Reading from YugabyteDB YCQL table
+  - Performing ETL operation
+  - Writing back to YugabyteDB
+  - Column pruning and predicate pushdown
 
 ## Prerequisites
 
@@ -7,7 +15,6 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 - Basic familiarity with YugabyteDB fundamentals - https://docs.yugabyte.com/latest/explore/
 - Familiarity with running Linux commands and bash CLI
 - Basic experience with Scala and Java
-- IDE of choice - Eclipse or IntelliJ or SpringSource Toolkit preferred
 
 ## Technical Requirements
 
@@ -20,14 +27,6 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 - Internet access - ability to access sites via port 80 and 443 (HTTPS)
 - Yugabyte Spark Cassandra connector: 3.0-yb-8 https://mvnrepository.com/artifact/com.yugabyte.spark/spark-cassandra-connector
 
-![Architecture of YB Spark workshop application](yb%20spark%20workshop%20diagram.png)
-
-- A Spark application with Yugabyte Spark connector to interact with Yugabye cloud to demonstrate how Yugabyte suppports Json data natively
-  - Reading from YugabyteDB table
-  - Performing ETL operation
-  - Writing back to YugabyteDB
-  - Column pruning and predicate pushdown
-
 ## Agenda
 
 - Overview of Yugabyte Architecture
@@ -35,7 +34,8 @@ Hands-on workshop to build apps using Yugabyte and Spark 3.x
 - YugabyteDB Spark Connector
 - Hands-on Workshop
 
-
+## Session Slides
+![Architecture of YB Spark workshop application](session_slides.pdf)
 
 ## Hands-on Workshop
 - Check Java version: 1.8 required - java -version
@@ -118,5 +118,4 @@ df_sel2.show(false)
 df_sel2.explain
 
 =======
-## Session Slides
-![Architecture of YB Spark workshop application](session_slides.pdf)
+
