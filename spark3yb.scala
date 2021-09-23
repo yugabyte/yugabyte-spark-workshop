@@ -87,10 +87,7 @@ val windowSpec  = Window.partitionBy("department_id").orderBy("salary")
 df_yb.withColumn("rank",rank().over(windowSpec)).show()
 
  //writing back  to YCQL: Persisting a Dataset to Database using Save command, following examples are equivalent
- df.write
-   .cassandraFormat("employees_json_copy", "test")
-   .mode("overwrite")
-   .save()
+df_yb.write.cassandraFormat("employees_json_copy", "test").mode("append").save()
  
 //To verify
 val sqlDF = spark.sql("SELECT * FROM ybcatalog.test.employees_json_copy").show(false)
